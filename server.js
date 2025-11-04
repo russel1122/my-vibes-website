@@ -14,6 +14,7 @@ app.use(express.json());
 
 // Serve static files from current directory
 app.use(express.static('.'));
+app.use(express.static(path.join(__dirname)));
 
 // Spotify configuration - using environment variables for security
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID || 'd8124d10496049eea796b314eef19908';
@@ -148,6 +149,18 @@ app.get('/callback', (req, res) => {
             </html>
         `);
     }
+});
+
+// Serve CSS files with correct MIME type
+app.get('/styles.css', (req, res) => {
+    res.setHeader('Content-Type', 'text/css');
+    res.sendFile(path.join(__dirname, 'styles.css'));
+});
+
+// Serve JS files with correct MIME type
+app.get('/script.js', (req, res) => {
+    res.setHeader('Content-Type', 'application/javascript');
+    res.sendFile(path.join(__dirname, 'script.js'));
 });
 
 // Serve index.html for root route
