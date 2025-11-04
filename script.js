@@ -1560,6 +1560,8 @@ style.textContent = `
 
 document.head.appendChild(style);
 
+
+
 // ===== INITIALIZATION CHECK =====
 console.log('🎵 My Vibes - JavaScript loaded successfully!');
 console.log('🌧️ Ready for some lo-fi vibes...');

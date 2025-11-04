@@ -1837,6 +1837,7 @@ textarea:focus,
     filter: brightness(1);
 }
 
+
 .music-note {
     text-align: center;
     margin-top: var(--spacing-xl);
