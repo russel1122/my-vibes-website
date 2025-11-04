@@ -1,0 +1,22 @@
+{
+  "name": "my-vibes-website",
+  "version": "1.0.0",
+  "description": "Personal music player website with Spotify integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2"
+  },
+  "keywords": [
+    "spotify",
+    "music",
+    "web-player"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

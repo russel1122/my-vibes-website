@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start index.html)",
+      "Bash(start check_url.html)",
+      "Bash(python serve.py:*)",
+      "Bash(start http://127.0.0.1:3000)",
+      "Bash(start http://127.0.0.1:3000/callback.html)",
+      "Bash(start http://127.0.0.1:3000/debug_spotify.html)",
+      "Bash(start http://127.0.0.1:3000/test_implicit.html)",
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "Bash(node server.js:*)",
+      "Bash(start http://127.0.0.1:3001)",
+      "Bash(dir)",
+      "Bash(del test_implicit.html debug_spotify.html check_url.html callback.html serve.py nul)",
+      "Bash(dir:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(tasklist:*)",
+      "Read(//d/**)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

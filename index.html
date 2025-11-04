@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vibes - A Digital Reflection of Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">My Vibes</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#music" class="nav-link">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Slide 1 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">My Vibes</h1>
+                <p class="hero-subtitle">A Digital Reflection of Me</p>
+                <p class="hero-tagline">"Where technology, creativity, and personality connect."</p>
+                <div class="hero-vision">
+                    <p>To create an engaging personal website that reflects who I am through my hobbies, music, and interactive design — blending creativity, technology, and individuality in one immersive space.</p>
+                    <p class="vision-highlight">A website that doesn't just show who I am — it lets people experience it.</p>
+                </div>
+                <a href="#about" class="cta-button">
+                    <span>Explore My World</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+            <div class="hero-animation">
+                <div class="floating-elements">
+                    <div class="element element-1"><i class="fas fa-music"></i></div>
+                    <div class="element element-2"><i class="fas fa-code"></i></div>
+                    <div class="element element-3"><i class="fas fa-gamepad"></i></div>
+                    <div class="element element-4"><i class="fas fa-robot"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="rain-effect"></div>
+    </section>
+
+    <!-- About & Hobbies Section - Slide 3 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" style="padding-top: 80px;">
+                <h2>About Me & My Hobbies</h2>
+                <p>What keeps me inspired and balanced — a mix of tech, creativity, and relaxation.</p>
+            </div>
+
+            <div class="hobbies-grid">
+                <div class="hobby-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hobby-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Music Listening & Creating</h3>
+                    <p>Music fuels my creativity — whether I'm tuning in to lo-fi beats while coding or experimenting with sounds.</p>
+                    <div class="hobby-quote">
+                        "I love rainy days and lo-fi music 🌧️ — it's my favorite creative atmosphere."
+                    </div>
+                </div>
+
+                <div class="hobby-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="hobby-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Exploring AI & Machine Learning</h3>
+                    <p>I enjoy experimenting with AI tools and learning how data shapes intelligent systems.</p>
+                    <div class="hobby-quote">
+                        "Curiosity meets innovation — that's my learning mindset."
+                    </div>
+                </div>
+
+                <div class="hobby-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gaming</h3>
+                    <p>Games challenge me to think strategically and creatively.</p>
+                    <div class="hobby-quote">
+                        "Every game is a new way to learn and adapt."
+                    </div>
+                </div>
+
+                <div class="hobby-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="hobby-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Learning New Tools & Technologies</h3>
+                    <p>I love exploring new digital tools and frameworks to stay up to date and inspired.</p>
+                    <div class="hobby-quote">
+                        "Continuous learning keeps me innovative."
+                    </div>
+                </div>
+
+                <div class="hobby-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="hobby-icon">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <h3>Playing Billiards</h3>
+                    <p>It teaches patience, focus, and precision — qualities I value in everything I do.</p>
+                    <div class="hobby-quote">
+                        "One good shot at a time."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Playlist Section - Slide 4 -->
+    <section id="music" class="music">
+        <div class="container">
+            <div class="section-header" style="padding-top: 80px;">
+                <h2>My Vibes Playlist</h2>
+                <p>Music sets the tone for creativity and productivity.</p>
+                <p class="music-subtitle">"My Vibes" features a 5-track playlist that reflects my personality and mood.</p>
+            </div>
+
+            <div class="playlist-container">
+                <div class="playlist-header">
+                    <h3>Top 5 Playlist</h3>
+                    <div class="playlist-controls">
+                        <button class="play-all-btn" id="playAllBtn">
+                            <i class="fas fa-play"></i> Play All
+                        </button>
+                    </div>
+                </div>
+
+                <div class="playlist">
+                    <div class="track" data-track="1">
+                        <div class="track-number">01</div>
+                        <div class="track-info">
+                            <h4>"Daises"</h4>
+                            <p>Justin Bieber</p>
+                        </div>
+                        <div class="track-controls">
+                            <button class="play-btn" data-track="0" data-title="Daises" data-artist="Justin Bieber" data-spotify-uri="spotify:track:5BZsQlgw21vDOAjoqkNgKb" data-spotify-preview="https://www.soundjay.com/misc/sounds/beep-07a.wav" data-artwork="https://i.scdn.co/image/ab67616d0000b273d65c4773bc5061fd27facc5b">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <span class="track-duration">3:18</span>
+                        </div>
+                    </div>
+
+                    <div class="track" data-track="2">
+                        <div class="track-number">02</div>
+                        <div class="track-info">
+                            <h4>"Residuals"</h4>
+                            <p>Chris Brown</p>
+                        </div>
+                        <div class="track-controls">
+                            <button class="play-btn" data-track="1" data-title="Residuals" data-artist="Chris Brown" data-spotify-uri="spotify:track:4t4rGgiVX7woTmlnW9SHJ7?si=47b97a5fa1ab49bb" data-spotify-preview="https://www.soundjay.com/misc/sounds/beep-10.wav" data-artwork="https://i.scdn.co/image/ab67616d0000b2730d64604af39b3427ef41fe3a">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <span class="track-duration">3:35</span>
+                        </div>
+                    </div>
+
+                    <div class="track" data-track="3">
+                        <div class="track-number">03</div>
+                        <div class="track-info">
+                            <h4>"Snooze"</h4>
+                            <p>SZA</p>
+                        </div>
+                        <div class="track-controls">
+                            <button class="play-btn" data-track="2" data-title="Snooze" data-artist="SZA" data-spotify-uri="spotify:track:4iZ4pt7kvcaH6Yo8UoZ4s2" data-spotify-preview="https://www.soundjay.com/misc/sounds/beep-05.wav" data-artwork="https://i.scdn.co/image/ab67616d0000b27370dbc9f47669d120ad874ec1">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <span class="track-duration">3:21</span>
+                        </div>
+                    </div>
+
+                    <div class="track" data-track="4">
+                        <div class="track-number">04</div>
+                        <div class="track-info">
+                            <h4>"Burn"</h4>
+                            <p>Usher</p>
+                        </div>
+                        <div class="track-controls">
+                            <button class="play-btn" data-track="3" data-title="Burn" data-artist="Usher" data-spotify-uri="spotify:track:7z3N2W7Xz1t2G2sAO8wFVH" data-spotify-preview="https://www.soundjay.com/misc/sounds/beep-21.wav" data-artwork="https://i.scdn.co/image/ab67616d0000b273365b3fb800c19f7ff72602da">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <span class="track-duration">3:51</span>
+                        </div>
+                    </div>
+
+                    <div class="track" data-track="5">
+                        <div class="track-number">05</div>
+                        <div class="track-info">
+                            <h4>"Get You"</h4>
+                            <p>Daniel Caesar ft. Kali Uchis</p>
+                        </div>
+                        <div class="track-controls">
+                            <button class="play-btn" data-track="4" data-title="Get You" data-artist="Daniel Caesar ft. Kali Uchis" data-spotify-uri="spotify:track:2uP6t2J5MEwhr9rDkAAzwh" data-spotify-preview="https://www.soundjay.com/misc/sounds/beep-28.wav" data-artwork="https://i.scdn.co/image/ab67616d0000b27305ac3e026324594a31fad7fb">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <span class="track-duration">2:21</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inline Music Player -->
+                <div class="inline-music-player" id="inlineMusicPlayer">
+                    <div class="player-container">
+                        <div class="player-artwork">
+                            <img id="currentArtwork" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Now Playing">
+                            <div class="play-overlay" id="playOverlay">
+                                <button class="main-play-btn" id="mainPlayBtn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="player-info">
+                            <div class="track-details">
+                                <h3 id="playerTrackTitle">Select a track to play</h3>
+                                <p id="playerArtistName">Your music, your vibes</p>
+                            </div>
+
+                            <div class="player-controls">
+                                <button class="control-btn" id="prevBtn">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button class="control-btn play-pause-btn" id="playPauseBtn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="control-btn" id="nextBtn">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+
+                            <div class="progress-container">
+                                <span id="currentTime">0:00</span>
+                                <div class="progress-bar" id="progressBar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                    <div class="progress-handle" id="progressHandle"></div>
+                                </div>
+                                <span id="totalTime">0:00</span>
+                            </div>
+
+                            <div class="volume-container">
+                                <i class="fas fa-volume-up"></i>
+                                <div class="volume-bar" id="volumeBar">
+                                    <div class="volume-fill" id="volumeFill"></div>
+                                    <div class="volume-handle" id="volumeHandle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Audio Element -->
+                    <audio id="audioPlayer" preload="metadata" crossorigin="anonymous">
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <!-- Spotify Authentication -->
+                    <div class="spotify-auth" id="spotifyAuth">
+                        <div class="auth-content">
+                            <i class="fab fa-spotify"></i>
+                            <div class="auth-text">
+                                <h4>Connect Your Spotify Account</h4>
+                                <p>Play full tracks directly on this website with your Spotify Premium account</p>
+                                <button class="spotify-login-btn" id="spotifyLoginBtn">
+                                    <i class="fab fa-spotify"></i>
+                                    Login with Spotify
+                                </button>
+                                <div class="auth-status" id="authStatus"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Player Status -->
+                    <div class="spotify-status" id="spotifyStatus" style="display: none;">
+                        <div class="status-content">
+                            <div class="status-indicator">
+                                <i class="fas fa-circle" id="statusIcon"></i>
+                                <span id="statusText">Connecting to Spotify...</span>
+                            </div>
+                            <button class="logout-btn" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section - Slide 5 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" style="padding-top: 80px;">
+                <h2>Get In Touch</h2>
+                <p>An interactive Contact Me form with JavaScript data validation for a smooth user experience.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>Whether you want to collaborate, discuss technology, or just share some music recommendations, I'd love to hear from you.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>Drop me a message</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-music"></i>
+                            <span>Share your playlist</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-code"></i>
+                            <span>Discuss tech projects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message * (minimum 10 characters)</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                        <span class="char-counter" id="charCounter">0/10 characters</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div class="form-validation-info">
+                        <h4>Form Validation Rules:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Name is required</li>
+                            <li><i class="fas fa-check-circle"></i> Email must include "@" symbol</li>
+                            <li><i class="fas fa-check-circle"></i> Message must be at least 10 characters</li>
+                            <li><i class="fas fa-check-circle"></i> Success message displayed when submitted correctly</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success Modal -->
+            <div class="success-modal" id="successModal">
+                <div class="modal-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thanks for reaching out! I'll get back to you soon.</p>
+                    <button class="close-modal" id="closeModal">Close</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>My Vibes</h4>
+                    <p>"My Vibes isn't just a website — it's a reflection of who I am: creative, curious, and constantly learning."</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tech Stack</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 My Vibes. Crafted with creativity and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
