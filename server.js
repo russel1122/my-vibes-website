@@ -150,6 +150,11 @@ app.get('/callback', (req, res) => {
     }
 });
 
+// Serve index.html for root route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`🚀 Server running at http://127.0.0.1:${PORT}`);
     console.log('📁 Serving files from:', __dirname);
