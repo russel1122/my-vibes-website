@@ -29,6 +29,8 @@ app.post('/exchange-token', async (req, res) => {
     console.log('Received code:', code ? code.substring(0, 20) + '...' : 'NO CODE');
     console.log('Client ID:', CLIENT_ID);
     console.log('Client Secret set:', CLIENT_SECRET !== 'b8c4036a539d4bffaeef17545fe9e76c');
+    console.log('Environment CLIENT_SECRET exists:', !!process.env.SPOTIFY_CLIENT_SECRET);
+    console.log('Using CLIENT_SECRET:', CLIENT_SECRET ? CLIENT_SECRET.substring(0, 10) + '...' : 'NONE');
 
     if (!code) {
         console.log('❌ No authorization code provided');
