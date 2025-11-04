@@ -19,11 +19,23 @@ app.use(express.static(path.join(__dirname)));
 // Spotify configuration - using environment variables for security
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID || 'd8124d10496049eea796b314eef19908';
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET || 'b8c4036a539d4bffaeef17545fe9e76c';
-const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || 'http://127.0.0.1:3001/callback';
+
+// Dynamically determine redirect URI based on environment
+function getRedirectUri(req) {
+    if (process.env.SPOTIFY_REDIRECT_URI) {
+        return process.env.SPOTIFY_REDIRECT_URI;
+    }
+
+    // If no environment variable, construct from request
+    const protocol = req.headers['x-forwarded-proto'] || req.protocol || 'http';
+    const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost:3001';
+    return `${protocol}://${host}/callback`;
+}
 
 // Route to exchange authorization code for access token
 app.post('/exchange-token', async (req, res) => {
     const { code } = req.body;
+    const redirectUri = getRedirectUri(req);
 
     console.log('=== Token Exchange Request ===');
     console.log('Received code:', code ? code.substring(0, 20) + '...' : 'NO CODE');
@@ -31,6 +43,7 @@ app.post('/exchange-token', async (req, res) => {
     console.log('Client Secret set:', CLIENT_SECRET !== 'b8c4036a539d4bffaeef17545fe9e76c');
     console.log('Environment CLIENT_SECRET exists:', !!process.env.SPOTIFY_CLIENT_SECRET);
     console.log('Using CLIENT_SECRET:', CLIENT_SECRET ? CLIENT_SECRET.substring(0, 10) + '...' : 'NONE');
+    console.log('Redirect URI:', redirectUri);
 
     if (!code) {
         console.log('❌ No authorization code provided');
@@ -53,7 +66,7 @@ app.post('/exchange-token', async (req, res) => {
             body: new URLSearchParams({
                 grant_type: 'authorization_code',
                 code: code,
-                redirect_uri: REDIRECT_URI
+                redirect_uri: redirectUri
             })
         });
 
